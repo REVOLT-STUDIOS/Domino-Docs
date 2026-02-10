@@ -16,3 +16,9 @@ plugins:
       version_selector: true
       css_dir: css
       javascript_dir: js
+nav:
+  - Getting Started:
+      - Introduction: index.md
+      - Core Concept: core-concept.md
+      - Installation & Setup: setup.md
+  - Architecture: architecture.md

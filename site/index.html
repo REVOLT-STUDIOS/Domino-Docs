@@ -288,6 +288,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#systemic-gameplay-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Systemic Gameplay Use Cases
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -435,6 +446,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#systemic-gameplay-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Systemic Gameplay Use Cases
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -455,7 +477,7 @@
 <h1 id="introduction">Introduction</h1>
 <h2 id="overview">Overview</h2>
 <p>Domino provides a <strong>systemic and engine-agnostic gameplay framework</strong>, designed to help build complex mechanics while allowing dynamic behaviors to emerge naturally, without relying on rigid or heavily scripted logic.</p>
-<p>Instead of defining hard-coded interactions between actors, the framework is built around <strong>stimuli</strong>, <strong>behaviors</strong>, and <strong>reactions</strong> that respond to context and state. This approach enables the creation of modular, reusable, and interconnected systems, encouraging emergent gameplay to arise from simple, well-defined rules.</p>
+<p>Instead of defining hard-coded interactions between actors, the framework is built around <strong>stimuli</strong>, <strong>actions</strong>, and <strong>reactions</strong> that respond to context and state. This approach enables the creation of modular, reusable, and interconnected systems, encouraging emergent gameplay to arise from simple, well-defined rules.</p>
 <p>The framework is intentionally <strong>genre-agnostic</strong> and can be used for AI, environmental interactions, puzzles, combat, stealth systems, or experimental gameplay. It is suitable both for rapid prototyping and for integration into more advanced production pipelines.</p>
 <hr />
 <h2 id="philosophy-and-goals">Philosophy and Goals</h2>
@@ -466,6 +488,16 @@
 <li>Encourage rule-based design over case-by-case logic</li>
 </ul>
 <p>The plugin is not meant to replace Unreal Engine’s native systems, but rather to act as a <strong>systemic logic layer</strong> that integrates naturally with existing Unreal workflows.</p>
+<hr />
+<h2 id="systemic-gameplay-use-cases">Systemic Gameplay Use Cases</h2>
+<p>This framework is well suited for systemic game design, as seen in titles like <em>Deus Ex</em>, <em>Dishonored</em>, <em>Prey</em>, <em>Thief</em>, or <em>Zelda: Breath of the Wild / Tears of the Kingdom</em>.</p>
+<p>In these games, interactions are driven by shared rules rather than hard-coded actor-to-actor logic. For example:</p>
+<ul>
+<li>A burning object emits a <strong>Burning</strong> stimulus → flammable actors accumulate heat.</li>
+<li>A metal object emits a <strong>Conductive</strong> stimulus → reacts to electricity.</li>
+<li>A wet surface modifies how <strong>Electric</strong> stimuli are interpreted.</li>
+</ul>
+<p>Instead of scripting specific interactions between actors, systems emit stimuli that other systems interpret and respond to. This rule-based approach enables modular design, cleaner scalability, and naturally emergent gameplay.</p>
 
 
 

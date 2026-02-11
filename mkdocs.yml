@@ -19,6 +19,11 @@ plugins:
 nav:
   - Getting Started:
       - Introduction: index.md
-      - Core Concept: core-concept.md
       - Installation & Setup: setup.md
+  - Core Concepts:
+      - Concept: core-concept/concept.md
+      - Brain and Behavior: core-concept/brain-behavior.md
+      - Actions and Reactions: core-concept/actions-reactions.md
+      - Effects: core-concept/effects.md
+      - Meta Properties: core-concept/meta-properties.md
   - Architecture: architecture.md

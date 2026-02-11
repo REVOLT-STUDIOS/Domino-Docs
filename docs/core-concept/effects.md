@@ -124,3 +124,72 @@ If it is not called, the underlying `UGameplayTask` will never complete, which m
 - Delays, duration timers, or ticked effects may not stop
 
 Always ensure that FinishEffect() is invoked at the end of your effect logic, whether the effect finishes naturally or is cancelled.
+
+## Built-in Reaction Effects
+
+The plugin comes with a set of pre-built **Reaction Effects** to cover common gameplay scenarios.  
+These effects can be used directly in Blueprints or C++, and serve as examples for creating custom effects.
+
+### AddMetaProperty
+
+Adds or modifies a Meta-Property on the owning Actor or on another target Actor.  
+Useful for triggering state changes or quantitative effects shared across systems.
+
+### RemoveMetaProperty
+
+Removes a Meta-Property from the owning Actor or another target.  
+Used to reset or clear state conditions.
+
+### ApplyDamage
+
+Applies damage to an Actor.  
+Supports standard Unreal damage types and can integrate with health systems.
+
+### AbortStimuli
+
+Cancels specific Stimuli or stops their propagation.  
+Useful to interrupt ongoing systemic interactions.
+
+### DestroySelfActor
+
+Destroys the Actor owning this effect.  
+Can be used for destructible objects, consumables, or self-terminating systems.
+
+### ManageFlags
+
+Adds or removes local Behavior flags or global Brain flags.  
+Allows controlling Reaction activation or global state changes.
+
+### SpawnCascadeParticle
+
+Spawns a legacy Cascade particle system at a specific location or attached to a component.
+
+### SpawnNiagaraParticle
+
+Spawns a Niagara particle system at a specific location or attached to a component.  
+Supports parameter overrides for dynamic effects.
+
+### SpawnAudio
+
+Plays a sound at a location or attached to a component.  
+Useful for reactive audio feedback to stimuli.
+
+### ApplyImpulse
+
+Applies a physics impulse to a component or Actor.  
+Supports directional and scaled impulses for environmental interactions.
+
+### AddComponent
+
+Dynamically adds a component to an Actor.  
+Useful for temporary sensors, effect markers, or modular Actor behavior.
+
+### SpawnActor
+
+Spawns a new Actor in the world.  
+Can be used for projectiles, summoned entities, or environmental objects.
+
+### AddActions
+
+Adds new Actions to a Behavior Component at runtime.  
+Allows dynamic modification of the emitter side of the system.

@@ -2,6 +2,8 @@
 
 ## Action
 
+![Actions](../images/core-concept-actions-reactions-actions-01.png)
+
 An **Action** defines the emission of a Stimulus and how it propagates through the world.
 
 It represents the **emitter side** of the system.
@@ -77,6 +79,8 @@ They are responsible for broadcasting structured information into the system —
 
 ## Reaction
 
+![Reactions](../images/core-concept-actions-reactions-reactions-01.png)
+
 A **Reaction** defines how an Actor listens to, filters, and interprets incoming Stimuli.
 
 It represents the **listener side** of the system.
@@ -147,7 +151,6 @@ State changes may themselves be interpreted by other Reactions.
 
 Once all conditions are satisfied, the Reaction triggers one or more Effects.
 
-Multiple Reactions can listen to the same Stimulus.  
 A single Reaction can trigger multiple Effects.
 
 ---
@@ -161,3 +164,66 @@ Reactions:
 - Operate strictly through filtering, accumulation, and condition evaluation
 
 They interpret information — they do not own the logic of execution.
+
+---
+
+## Presets
+
+Presets allow you to configure, extend, or override Actions and Reactions without modifying the original Behavior setup.
+
+They are designed to promote reuse, modularity, and scalability across multiple Actors.
+
+There are three types of Presets.
+
+![Actions Reactions Presets Diagram](../images/core-concept-actions-reactions-presets-01.png)
+
+---
+
+### Global Presets
+
+Global Presets apply to both **Actions and Reactions**.
+
+They allow you to:
+
+- Add shared configuration
+- Enforce common rules
+- Modify default parameters
+- Apply systemic constraints across multiple Behaviors
+
+They act as a high-level configuration layer.
+
+---
+
+### Action Presets
+
+Action Presets specifically target the emitter side of the system.
+
+They can:
+
+- Add new Actions to a Behavior
+- Override existing Actions
+
+---
+
+### Reaction Presets
+
+Reaction Presets target the listener side of the system.
+
+They can:
+
+- Add new Reactions
+- Override existing Reactions
+
+---
+
+### Why Presets Matter
+
+Presets allow you to:
+
+- Avoid duplicating Behavior configurations
+- Keep base Behaviors clean and reusable
+- Scale gameplay rules without hard-coded logic
+
+Instead of modifying Actors directly, you layer behavior modifications through Presets.
+
+This preserves modularity while enabling powerful runtime configuration.

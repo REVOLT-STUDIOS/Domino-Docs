@@ -2,6 +2,8 @@
 
 ## Brain Component
 
+![Behavior Component](../images/core-concept-brain-behavior-behavior-01.png)
+
 The Brain Component is required on any Actor that owns one or more Behavior Components.
 
 It acts as:
@@ -14,7 +16,17 @@ An Actor may have multiple Behavior Components attached to different Primitive C
 
 ---
 
-### Behavior vs Brain
+## Behavior Component
+
+![Brain Component](../images/core-concept-brain-behavior-brain-01.png)
+
+The Behavior Component is responsible for handling localized systemic logic on an Actor.
+
+It is a `SceneComponent` that must be attached to a `PrimitiveComponent`, allowing it to emit and receive stimuli through the attached component’s `OnHit` and `OnOverlap` events.
+
+---
+
+## Behavior vs Brain
 
 **Behavior Component**
 

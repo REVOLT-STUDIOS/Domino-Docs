@@ -17,8 +17,6 @@ They provide a shared state layer between otherwise independent systems.
 
 ---
 
-### Independent Yet Systemic
-
 The Meta-Property system is fully independent and can be used on its own as a lightweight data container for storing Actor-level or component-level state.
 
 However, when coupled with Actions, Reactions, and Effects, it becomes a powerful decoupling tool.

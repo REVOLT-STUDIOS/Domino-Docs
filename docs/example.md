@@ -54,4 +54,4 @@ The best way to understand the plugin is to experiment with it directly.
 ## Purpose
 
 The example project is not meant to represent a full game implementation.  
-Its purpose is purely educational and demonstrative — to illustrate how systemic interactions can be composed using the framework.
+Its purpose is purely educational and demonstrative to illustrate how systemic interactions can be composed using the framework.

@@ -4,24 +4,20 @@ A **Reaction Effect** represents a concrete modification to the game world or to
 
 It is the execution layer of the system.
 
----
+!!! info "Example"
 
-## Examples
+    - Applying damage
+    - Modifying a Meta-Property
+    - Triggering an animation or sound
+    - Applying a force or impulse
 
-- Applying damage
-- Modifying a Meta-Property
-- Triggering an animation or sound
-- Applying a force or impulse
+    Effects are:
 
-Effects are:
+    - Stateless
+    - Reusable
+    - Executed as a result of a Reaction
 
-- Stateless
-- Reusable
-- Executed as a result of a Reaction
-
-Effects may optionally emit new Stimuli, enabling chained or systemic interactions.
-
----
+    Effects may optionally emit new Stimuli, enabling chained or systemic interactions.
 
 ## Creating Custom Effects
 
@@ -114,82 +110,36 @@ When triggered, an Effect follows this lifecycle:
     FinishEffect()
     → Called when duration ends or effect is cancelled
 
-**Important:**
+!!! danger "Important"
 
-`FinishEffect()` must be called manually in your implementation.
-If it is not called, the underlying `UGameplayTask` will never complete, which means:
+    `FinishEffect()` must be called manually in your implementation.
+    If it is not called, the underlying `UGameplayTask` will never complete, which means:
 
-- The Reaction that triggered the effect will remain active
-- Any subsequent effects or state changes may not execute
-- Delays, duration timers, or ticked effects may not stop
+    - The Reaction that triggered the effect will remain active
+    - Any subsequent effects or state changes may not execute
+    - Delays, duration timers, or ticked effects may not stop
 
-Always ensure that FinishEffect() is invoked at the end of your effect logic, whether the effect finishes naturally or is cancelled.
+    Always ensure that FinishEffect() is invoked at the end of your effect logic, whether the effect finishes naturally or is cancelled.
 
 ## Built-in Reaction Effects
 
 The plugin comes with a set of pre-built **Reaction Effects** to cover common gameplay scenarios.  
 These effects can be used directly in Blueprints or C++, and serve as examples for creating custom effects.
 
-### AddMetaProperty
-
-Adds or modifies a Meta-Property on the owning Actor or on another target Actor.  
-Useful for triggering state changes or quantitative effects shared across systems.
-
-### RemoveMetaProperty
-
-Removes a Meta-Property from the owning Actor or another target.  
-Used to reset or clear state conditions.
-
-### ApplyDamage
-
-Applies damage to an Actor.  
-Supports standard Unreal damage types and can integrate with health systems.
-
-### AbortStimuli
-
-Cancels specific Stimuli or stops their propagation.  
-Useful to interrupt ongoing systemic interactions.
-
-### DestroySelfActor
-
-Destroys the Actor owning this effect.  
-Can be used for destructible objects, consumables, or self-terminating systems.
-
-### ManageFlags
-
-Adds or removes local Behavior flags or global Brain flags.  
-Allows controlling Reaction activation or global state changes.
-
-### SpawnCascadeParticle
-
-Spawns a legacy Cascade particle system at a specific location or attached to a component.
-
-### SpawnNiagaraParticle
-
-Spawns a Niagara particle system at a specific location or attached to a component.  
-Supports parameter overrides for dynamic effects.
-
-### SpawnAudio
-
-Plays a sound at a location or attached to a component.  
-Useful for reactive audio feedback to stimuli.
-
-### ApplyImpulse
-
-Applies a physics impulse to a component or Actor.  
-Supports directional and scaled impulses for environmental interactions.
-
-### AddComponent
-
-Dynamically adds a component to an Actor.  
-Useful for temporary sensors, effect markers, or modular Actor behavior.
-
-### SpawnActor
-
-Spawns a new Actor in the world.  
-Can be used for projectiles, summoned entities, or environmental objects.
-
-### AddActions
-
-Adds new Actions to a Behavior Component at runtime.  
-Allows dynamic modification of the emitter side of the system.
+| Effect Name                  | Description                                                                                                                                                                       |
+| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **AddMetaProperty**          | Adds or modifies a Meta-Property on the owning Actor or on another target Actor. Useful for triggering state changes or quantitative effects shared across systems.               |
+| **RemoveMetaProperty**       | Removes a Meta-Property from the owning Actor or another target. Used to reset or clear state conditions.                                                                         |
+| **ApplyDamage**              | Applies damage to an Actor. Supports standard Unreal damage types and can integrate with health systems.                                                                          |
+| **AbortStimuli**             | Cancels specific Stimuli or stops their propagation. Useful to interrupt ongoing systemic interactions.                                                                           |
+| **DestroySelfActor**         | Destroys the Actor owning this effect. Can be used for destructible objects, consumables, or self-terminating systems.                                                            |
+| **ManageFlags**              | Adds or removes local Behavior flags or global Brain flags. Allows controlling Reaction activation or global state changes.                                                       |
+| **SpawnCascadeParticle**     | Spawns a legacy Cascade particle system at a specific location or attached to a component.                                                                                        |
+| **SpawnNiagaraParticle**     | Spawns a Niagara particle system at a specific location or attached to a component. Supports parameter overrides for dynamic effects.                                             |
+| **SpawnAudio**               | Plays a sound at a location or attached to a component. Useful for reactive audio feedback to stimuli.                                                                            |
+| **ApplyImpulse**             | Applies a physics impulse to a component or Actor. Supports directional and scaled impulses for environmental interactions.                                                       |
+| **AddComponent**             | Dynamically adds a component to an Actor. Useful for temporary sensors, effect markers, or modular Actor behavior.                                                                |
+| **SpawnActor**               | Spawns a new Actor in the world. Can be used for projectiles, summoned entities, or environmental objects.                                                                        |
+| **AddActions**               | Adds new Actions to a Behavior Component at runtime. Allows dynamic modification of the emitter side of the system.                                                               |
+| **PropagateStimulusToSelf**  | Immediately propagates a new Stimulus to the owning Actor’s Brain. Useful for chaining internal systemic reactions or transforming an incoming stimulus into another one locally. |
+| **PropagateStimulusInRange** | Propagates a new Stimulus to all valid Actors within a defined radius. Enables area-based systemic interactions such as environmental chain reactions.                            |

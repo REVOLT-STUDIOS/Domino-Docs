@@ -63,17 +63,15 @@ For example, emission can be blocked if:
 
 This ensures that emission logic remains controlled and context-aware.
 
----
+!!! danger "Important"
 
-### Important
+    Actions:
 
-Actions:
+    - Do not listen to Stimuli
+    - Do not apply Effects directly
+    - Only define emission and propagation rules
 
-- Do not listen to Stimuli
-- Do not apply Effects directly
-- Only define emission and propagation rules
-
-They are responsible for broadcasting structured information into the system — nothing more.
+    They are responsible for broadcasting structured information into the system, nothing more.
 
 ---
 
@@ -153,17 +151,15 @@ Once all conditions are satisfied, the Reaction triggers one or more Effects.
 
 A single Reaction can trigger multiple Effects.
 
----
+!!! danger "Important"
 
-### Important
+    Reactions:
 
-Reactions:
+    - Do not emit Stimuli directly (unless via Effects)
+    - Do not contain hard-coded actor references
+    - Operate strictly through filtering, accumulation, and condition evaluation
 
-- Do not emit Stimuli directly (unless via Effects)
-- Do not contain hard-coded actor references
-- Operate strictly through filtering, accumulation, and condition evaluation
-
-They interpret information — they do not own the logic of execution.
+    They interpret information, they do not own the logic of execution.
 
 ---
 
@@ -212,7 +208,6 @@ Reaction Presets target the listener side of the system.
 They can:
 
 - Add new Reactions
-- Override existing Reactions
 
 ---
 

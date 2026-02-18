@@ -1,10 +1,10 @@
 # Example Project
 
-To help you understand and experiment with the framework, the plugin includes an **Unreal Engine example project**.
+To help you understand and experiment with the framework, you can download the **Unreal Engine example project**.
 
 This project demonstrates the core systems described in this documentation and provides a sandbox environment for testing systemic behaviors in isolation.
 
----
+[Download](#){ .md-button .md-button--primary }
 
 ## What’s Included
 

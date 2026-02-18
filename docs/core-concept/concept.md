@@ -26,14 +26,14 @@ A **Stimulus** is a piece of information emitted into the world.
 
 It represents **something that happened**, without implying any outcome or response, it is represented as a `Gameplay Tag` in Unreal Engine.
 
-### Examples
+!!! info "Example"
 
-- A sound emission
-- A damage event
-- A state change
-- An interaction attempt
+    - A sound emission
+    - A damage event
+    - A state change
+    - An interaction attempt
 
-Stimuli are purely descriptive. They do not contain logic and do not directly trigger effects.
+    Stimuli are purely descriptive. They do not contain logic and do not directly trigger effects.
 
 ---
 

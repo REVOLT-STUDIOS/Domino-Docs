@@ -27,6 +27,7 @@ nav:
       - Effects: core-concept/effects.md
       - Meta Properties: core-concept/meta-properties.md
   - Architecture: architecture.md
+  - API: api.md
   - Debugging: debugging.md
   - FAQ: faq.md
   - Example: example.md

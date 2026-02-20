@@ -29,6 +29,39 @@ This section explains how to install the plugin, activate it in your project, an
 
 ---
 
+## Usage in a C++ Project
+
+To use Domino in a C++ project, you must add the required modules to your `.Build.cs` file.
+
+### Required Modules
+
+- `Domino`
+- `GameplayTasks`
+
+If you need access to editor-specific features or functions, also add:
+
+- `DominoEditor`
+
+### Example
+
+```csharp
+PublicDependencyModuleNames.AddRange(new string[]
+{
+    "Core",
+    "CoreUObject",
+    "Engine",
+    "Domino",
+    "GameplayTasks"
+});
+
+PrivateDependencyModuleNames.AddRange(new string[]
+{
+    "DominoEditor" // Only if you need editor functionality
+});
+```
+
+---
+
 ## First Setup
 
 ### Activate in a New Project
@@ -50,8 +83,10 @@ This section explains how to install the plugin, activate it in your project, an
 - Open the **Output Log** and confirm that the plugin modules load without errors:
 
 ```
+
 [Domino] Module loaded successfully
 [Domino] Behavior Component initialized
+
 ```
 
 - Optionally, drag a **Behavior Component** onto a test actor and press **Play** in PIE to ensure everything works as expected.

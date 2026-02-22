@@ -54,7 +54,6 @@ Every interaction in the plugin follows a **clear lifecycle**:
    - The stimulus is broadcasted to all relevant Reactions in the world or within scope.
 3. **Interpretation by Behaviors**
    - Behavior Components evaluate incoming stimuli via their Reactions.
-   - Conditions are checked against contextual data and meta-properties.
 4. **Effect Application**
    - If conditions are satisfied, Effects are executed.
    - Effects may modify meta-properties, actor state, or trigger new stimuli, continuing the interaction chain.

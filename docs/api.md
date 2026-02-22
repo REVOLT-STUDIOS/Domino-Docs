@@ -7,6 +7,7 @@ The API is divided into three logical layers:
 - Global
 - Brain Component
 - Behavior Component
+- Meta-Property
 
 Each layer exposes different responsibilities within the systemic framework.
 
@@ -36,8 +37,6 @@ The Brain Component API exposes Actor-level systemic controls.
 The Brain is the central decision layer and registry for all Behavior Components attached to an Actor.
 
 ![Brain](images/api-brain-01.png)
-
-# Brain Component API
 
 The Brain Component is the central coordination layer of the Domino system.
 It manages Behavior registration, stimulus propagation, global flags,
@@ -93,15 +92,6 @@ All propagation functions support an optional **Intensity** parameter (default =
 
 ---
 
-## Lifecycle (C++)
-
-| Function Name | Description                                                           |
-| ------------- | --------------------------------------------------------------------- |
-| **BeginPlay** | Initializes the Brain Component when the Actor starts.                |
-| **EndPlay**   | Cleans up the Brain Component when the Actor is destroyed or removed. |
-
----
-
 ## Internal / C++ Only Functions
 
 These functions are not exposed to Blueprint and are used internally by the system:
@@ -122,8 +112,6 @@ The Behavior Component API exposes localized systemic functionality tied to a sp
 It represents a physical interaction zone capable of emitting Actions and reacting to Stimuli.
 
 ![Behavior](images/api-behavior-01.png)
-
-# Behavior Component API
 
 The Behavior Component handles localized systemic logic tied to a specific
 PrimitiveComponent. It manages Actions (stimulus emitters), Reactions,
@@ -171,15 +159,6 @@ The optional **bForce** parameter allows bypassing frequency checks.
 | **AccumulateStimulusIntensity** | Accumulates intensity for a stimulus and returns the new accumulated value.           |
 | **ResetStimulusIntensity**      | Resets the accumulated intensity of a stimulus.                                       |
 | **IsStimulusActive**            | Returns whether a specific stimulus is currently active.                              |
-
----
-
-## Lifecycle (C++)
-
-| Function Name | Description                                                              |
-| ------------- | ------------------------------------------------------------------------ |
-| **BeginPlay** | Initializes the Behavior Component at startup.                           |
-| **EndPlay**   | Cleans up the Behavior Component when the Actor is destroyed or removed. |
 
 ---
 
@@ -284,3 +263,4 @@ These allow low-level or custom meta-property management.
 | Global             | System-wide                | Utilities and manual control        |
 | Brain Component    | Actor-wide                 | Central registry and decision layer |
 | Behavior Component | Local (PrimitiveComponent) | Action/Reaction logic               |
+| Meta-Property      | Actor-wide                 | Meta-Property logic                 |

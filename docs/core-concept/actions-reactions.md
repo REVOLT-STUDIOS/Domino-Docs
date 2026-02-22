@@ -46,7 +46,6 @@ An Action can define:
 - Stimulus intensity
 - Radius or range
 - Shape configuration
-- Custom parameters relevant to the Stimulus type
 
 Intensity can later influence the activation of a Reaction.
 
@@ -95,7 +94,6 @@ Reactions are responsible for:
 - Validating contextual data (source, instigator, location)
 - Checking local component flags
 - Checking global Brain flags
-- Evaluating Meta-Property conditions
 
 A Reaction can be blocked if specific required flags are missing, or if forbidden flags are present.
 

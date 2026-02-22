@@ -31,6 +31,7 @@ nav:
   - Debugging: debugging.md
   - FAQ: faq.md
   - Example: example.md
+  - Support: support.md
 markdown_extensions:
   - tables
   - admonition

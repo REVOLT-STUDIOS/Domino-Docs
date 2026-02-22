@@ -84,7 +84,7 @@ Timing Control
 Effects support built-in timing parameters:
 
 - StartDelay → Delay before StartEffect is called
-- Duration → Duration before automatic finish (0 = instant)
+- Duration → Duration before automatic finish (0 = infinite)
 - bUseTick → Enables ticking via TickEffect
 
 This allows you to implement:
@@ -126,20 +126,20 @@ When triggered, an Effect follows this lifecycle:
 The plugin comes with a set of pre-built **Reaction Effects** to cover common gameplay scenarios.  
 These effects can be used directly in Blueprints or C++, and serve as examples for creating custom effects.
 
-| Effect Name                  | Description                                                                                                                                                                       |
-| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **AddMetaProperty**          | Adds or modifies a Meta-Property on the owning Actor or on another target Actor. Useful for triggering state changes or quantitative effects shared across systems.               |
-| **RemoveMetaProperty**       | Removes a Meta-Property from the owning Actor or another target. Used to reset or clear state conditions.                                                                         |
-| **ApplyDamage**              | Applies damage to an Actor. Supports standard Unreal damage types and can integrate with health systems.                                                                          |
-| **AbortStimuli**             | Cancels specific Stimuli or stops their propagation. Useful to interrupt ongoing systemic interactions.                                                                           |
-| **DestroySelfActor**         | Destroys the Actor owning this effect. Can be used for destructible objects, consumables, or self-terminating systems.                                                            |
-| **ManageFlags**              | Adds or removes local Behavior flags or global Brain flags. Allows controlling Reaction activation or global state changes.                                                       |
-| **SpawnCascadeParticle**     | Spawns a legacy Cascade particle system at a specific location or attached to a component.                                                                                        |
-| **SpawnNiagaraParticle**     | Spawns a Niagara particle system at a specific location or attached to a component. Supports parameter overrides for dynamic effects.                                             |
-| **SpawnAudio**               | Plays a sound at a location or attached to a component. Useful for reactive audio feedback to stimuli.                                                                            |
-| **ApplyImpulse**             | Applies a physics impulse to a component or Actor. Supports directional and scaled impulses for environmental interactions.                                                       |
-| **AddComponent**             | Dynamically adds a component to an Actor. Useful for temporary sensors, effect markers, or modular Actor behavior.                                                                |
-| **SpawnActor**               | Spawns a new Actor in the world. Can be used for projectiles, summoned entities, or environmental objects.                                                                        |
-| **AddActions**               | Adds new Actions to a Behavior Component at runtime. Allows dynamic modification of the emitter side of the system.                                                               |
-| **PropagateStimulusToSelf**  | Immediately propagates a new Stimulus to the owning Actor’s Brain. Useful for chaining internal systemic reactions or transforming an incoming stimulus into another one locally. |
-| **PropagateStimulusInRange** | Propagates a new Stimulus to all valid Actors within a defined radius. Enables area-based systemic interactions such as environmental chain reactions.                            |
+| Effect Name                          | Description                                                                                                                                                                       |
+| ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **AddMetaProperty**                  | Adds or modifies a Meta-Property on the owning Actor or on another target Actor. Useful for triggering state changes or quantitative effects shared across systems.               |
+| **RemoveMetaProperty**               | Removes a Meta-Property from the owning Actor or another target. Used to reset or clear state conditions.                                                                         |
+| **ApplyDamage**                      | Applies damage to an Actor. Supports standard Unreal damage types and can integrate with health systems.                                                                          |
+| **AbortStimuli**                     | Cancels specific Stimuli or stops their propagation. Useful to interrupt ongoing systemic interactions.                                                                           |
+| **DestroySelfActor**                 | Destroys the Actor owning this effect. Can be used for destructible objects, consumables, or self-terminating systems.                                                            |
+| **ManageFlags**                      | Adds or removes local Behavior flags or global Brain flags. Allows controlling Reaction activation or global state changes.                                                       |
+| **SpawnCascadeParticle**             | Spawns a legacy Cascade particle system at a specific location or attached to a component.                                                                                        |
+| **SpawnNiagaraParticle**             | Spawns a Niagara particle system at a specific location or attached to a component. Supports parameter overrides for dynamic effects.                                             |
+| **SpawnAudio**                       | Plays a sound at a location or attached to a component. Useful for reactive audio feedback to stimuli.                                                                            |
+| **ApplyImpulseOppositeHitDirection** | Applies a physics impulse to a component or Actor.                                                                                                                                |
+| **AddComponent**                     | Dynamically adds a component to an Actor. Useful for temporary sensors, effect markers, or modular Actor behavior.                                                                |
+| **SpawnActor**                       | Spawns a new Actor in the world. Can be used for projectiles, summoned entities, or environmental objects.                                                                        |
+| **AddActions**                       | Adds new Actions to a Behavior Component at runtime. Allows dynamic modification of the emitter side of the system.                                                               |
+| **PropagateStimulusToSelf**          | Immediately propagates a new Stimulus to the owning Actor’s Brain. Useful for chaining internal systemic reactions or transforming an incoming stimulus into another one locally. |
+| **PropagateStimulusInRange**         | Propagates a new Stimulus to all valid Actors within a defined radius. Enables area-based systemic interactions such as environmental chain reactions.                            |

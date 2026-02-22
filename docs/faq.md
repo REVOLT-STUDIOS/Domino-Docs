@@ -27,11 +27,9 @@ However, it becomes significantly more powerful when combined with Reactions and
 
 ### If I have a question, how can I get support?
 
-You can contact support by email at:
+You can find all the information in the dedicated page :
 
-support@revolt-studios.com
-
-You can also join the official Discord server to ask questions, share feedback, and discuss implementation with the community.
+[Support](support.md){ .md-button .md-button--primary }
 
 ---
 
@@ -157,25 +155,9 @@ The plugin is designed to be accessible to designers while remaining extensible 
 
 ---
 
-### Does the plugin include full source code?
-
-No.
-
-The plugin provides compiled libraries and public headers only.
-
-This allows you to:
-
-- Integrate the framework into C++ projects
-- Extend it through exposed APIs
-- Create custom Actions, Reactions, and Effects
-
-However, the internal implementation source files are not included.
-
----
-
 ### Does the plugin support replication?
 
-No — replication is not currently supported.
+No, replication is not currently supported.
 
 Replicating fully systemic interactions is a complex challenge, especially when dealing with decoupled stimuli propagation, state accumulation, and chained reactions.
 
@@ -232,20 +214,3 @@ No.
 
 The plugin acts as a systemic logic layer on top of Unreal Engine.  
 It integrates naturally with Actors, Components, physics events, and Blueprint workflows.
-
----
-
-### Is this framework only for AI?
-
-No.
-
-It can be used for:
-
-- AI behavior
-- Environmental systems
-- Physics interactions
-- Puzzle mechanics
-- Combat logic
-- State-driven world simulation
-
-Any gameplay system that benefits from decoupled rule-based interactions.

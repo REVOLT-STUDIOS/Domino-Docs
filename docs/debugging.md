@@ -24,7 +24,6 @@ Verify:
 
 - The Action is not blocked by local flags
 - The Brain does not contain blocking global flags
-- The emission trigger is actually firing (input, event, physics)
 
 If the Action is blocked, no Stimulus will propagate.
 
@@ -79,17 +78,7 @@ If intensity does not fall within the configured activation range, the Reaction 
 
 ---
 
-### 5. Are Meta-Property Conditions Valid?
-
-If the Reaction depends on Meta-Properties:
-
-- Verify current values
-- Confirm threshold conditions
-- Check if another system modified the property unexpectedly
-
----
-
-### 6. Are Effects Executing?
+### 5. Are Effects Executing?
 
 If the Reaction triggers but no visible result occurs:
 

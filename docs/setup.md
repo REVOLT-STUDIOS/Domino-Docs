@@ -85,7 +85,6 @@ PrivateDependencyModuleNames.AddRange(new string[]
 ```
 
 [Domino] Module loaded successfully
-[Domino] Behavior Component initialized
 
 ```
 

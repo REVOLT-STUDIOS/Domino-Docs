@@ -347,6 +347,45 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#usage-in-a-c-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage in a C++ Project
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage in a C++ Project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required Modules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#first-setup" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -640,6 +679,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../debugging/" class="md-nav__link">
         
   
@@ -702,6 +768,33 @@
     
   
     Example
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support
   
 
     
@@ -779,6 +872,45 @@
     <span class="md-ellipsis">
       
         Dependencies
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-in-a-c-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage in a C++ Project
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage in a C++ Project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required Modules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
       
     </span>
   </a>
@@ -883,6 +1015,33 @@
 <li>No additional third-party plugins are required, but any dependent modules (if used in your project) must also be enabled.</li>
 </ul>
 <hr />
+<h2 id="usage-in-a-c-project">Usage in a C++ Project</h2>
+<p>To use Domino in a C++ project, you must add the required modules to your <code>.Build.cs</code> file.</p>
+<h3 id="required-modules">Required Modules</h3>
+<ul>
+<li><code>Domino</code></li>
+<li><code>GameplayTasks</code></li>
+</ul>
+<p>If you need access to editor-specific features or functions, also add:</p>
+<ul>
+<li><code>DominoEditor</code></li>
+</ul>
+<h3 id="example">Example</h3>
+<div class="highlight"><pre><span></span><code><span class="n">PublicDependencyModuleNames</span><span class="p">.</span><span class="n">AddRange</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="kt">string</span><span class="p">[]</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="s">&quot;Core&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;CoreUObject&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;Engine&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;Domino&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;GameplayTasks&quot;</span>
+<span class="p">});</span>
+
+<span class="n">PrivateDependencyModuleNames</span><span class="p">.</span><span class="n">AddRange</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="kt">string</span><span class="p">[]</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="s">&quot;DominoEditor&quot;</span><span class="w"> </span><span class="c1">// Only if you need editor functionality</span>
+<span class="p">});</span>
+</code></pre></div>
+<hr />
 <h2 id="first-setup">First Setup</h2>
 <h3 id="activate-in-a-new-project">Activate in a New Project</h3>
 <ul>
@@ -902,9 +1061,8 @@
 <ul>
 <li>Open the <strong>Output Log</strong> and confirm that the plugin modules load without errors:</li>
 </ul>
-<pre><code>[Domino] Module loaded successfully
-[Domino] Behavior Component initialized
-</code></pre>
+<div class="highlight"><pre><span></span><code>[Domino] Module loaded successfully
+</code></pre></div>
 <ul>
 <li>Optionally, drag a <strong>Behavior Component</strong> onto a test actor and press <strong>Play</strong> in PIE to ensure everything works as expected.</li>
 </ul>

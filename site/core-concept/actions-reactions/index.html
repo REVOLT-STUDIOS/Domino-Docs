@@ -479,17 +479,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#important" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Important
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -551,11 +540,61 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#important_1" class="md-nav__link">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#presets" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Important
+        Presets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Presets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#global-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Global Presets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#action-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Action Presets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reaction-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reaction Presets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-presets-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Presets Matter
       
     </span>
   </a>
@@ -673,6 +712,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../../api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../debugging/" class="md-nav__link">
         
   
@@ -735,6 +801,33 @@
     
   
     Example
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support
   
 
     
@@ -818,17 +911,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#important" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Important
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -890,11 +972,61 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#important_1" class="md-nav__link">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#presets" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Important
+        Presets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Presets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#global-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Global Presets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#action-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Action Presets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reaction-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reaction Presets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-presets-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Presets Matter
       
     </span>
   </a>
@@ -925,6 +1057,7 @@
 
 <h1 id="actions-reactions">Actions / Reactions</h1>
 <h2 id="action">Action</h2>
+<p><img alt="Actions" src="../../images/core-concept-actions-reactions-actions-01.png" /></p>
 <p>An <strong>Action</strong> defines the emission of a Stimulus and how it propagates through the world.</p>
 <p>It represents the <strong>emitter side</strong> of the system.</p>
 <p>An Action is responsible for:</p>
@@ -958,7 +1091,6 @@ It defines how the Stimulus is transmitted.</p>
 <li>Stimulus intensity</li>
 <li>Radius or range</li>
 <li>Shape configuration</li>
-<li>Custom parameters relevant to the Stimulus type</li>
 </ul>
 <p>Intensity can later influence the activation of a Reaction.</p>
 <hr />
@@ -970,17 +1102,19 @@ It defines how the Stimulus is transmitted.</p>
 <li>The Brain contains restrictive global flags</li>
 </ul>
 <p>This ensures that emission logic remains controlled and context-aware.</p>
-<hr />
-<h3 id="important">Important</h3>
+<div class="admonition danger">
+<p class="admonition-title">Important</p>
 <p>Actions:</p>
 <ul>
 <li>Do not listen to Stimuli</li>
 <li>Do not apply Effects directly</li>
 <li>Only define emission and propagation rules</li>
 </ul>
-<p>They are responsible for broadcasting structured information into the system — nothing more.</p>
+<p>They are responsible for broadcasting structured information into the system, nothing more.</p>
+</div>
 <hr />
 <h2 id="reaction">Reaction</h2>
+<p><img alt="Reactions" src="../../images/core-concept-actions-reactions-reactions-01.png" /></p>
 <p>A <strong>Reaction</strong> defines how an Actor listens to, filters, and interprets incoming Stimuli.</p>
 <p>It represents the <strong>listener side</strong> of the system.</p>
 <p>A Reaction does not directly execute gameplay logic by itself — it evaluates conditions and, if valid, triggers one or more Effects.</p>
@@ -992,7 +1126,6 @@ It defines how the Stimulus is transmitted.</p>
 <li>Validating contextual data (source, instigator, location)</li>
 <li>Checking local component flags</li>
 <li>Checking global Brain flags</li>
-<li>Evaluating Meta-Property conditions</li>
 </ul>
 <p>A Reaction can be blocked if specific required flags are missing, or if forbidden flags are present.</p>
 <p>This ensures precise and context-aware activation.</p>
@@ -1034,17 +1167,59 @@ It defines how the Stimulus is transmitted.</p>
 <hr />
 <h3 id="effect-triggering">Effect Triggering</h3>
 <p>Once all conditions are satisfied, the Reaction triggers one or more Effects.</p>
-<p>Multiple Reactions can listen to the same Stimulus.<br />
-A single Reaction can trigger multiple Effects.</p>
-<hr />
-<h3 id="important_1">Important</h3>
+<p>A single Reaction can trigger multiple Effects.</p>
+<div class="admonition danger">
+<p class="admonition-title">Important</p>
 <p>Reactions:</p>
 <ul>
 <li>Do not emit Stimuli directly (unless via Effects)</li>
 <li>Do not contain hard-coded actor references</li>
 <li>Operate strictly through filtering, accumulation, and condition evaluation</li>
 </ul>
-<p>They interpret information — they do not own the logic of execution.</p>
+<p>They interpret information, they do not own the logic of execution.</p>
+</div>
+<hr />
+<h2 id="presets">Presets</h2>
+<p>Presets allow you to configure, extend, or override Actions and Reactions without modifying the original Behavior setup.</p>
+<p>They are designed to promote reuse, modularity, and scalability across multiple Actors.</p>
+<p>There are three types of Presets.</p>
+<p><img alt="Actions Reactions Presets Diagram" src="../../images/core-concept-actions-reactions-presets-01.png" /></p>
+<hr />
+<h3 id="global-presets">Global Presets</h3>
+<p>Global Presets apply to both <strong>Actions and Reactions</strong>.</p>
+<p>They allow you to:</p>
+<ul>
+<li>Add shared configuration</li>
+<li>Enforce common rules</li>
+<li>Modify default parameters</li>
+<li>Apply systemic constraints across multiple Behaviors</li>
+</ul>
+<p>They act as a high-level configuration layer.</p>
+<hr />
+<h3 id="action-presets">Action Presets</h3>
+<p>Action Presets specifically target the emitter side of the system.</p>
+<p>They can:</p>
+<ul>
+<li>Add new Actions to a Behavior</li>
+<li>Override existing Actions</li>
+</ul>
+<hr />
+<h3 id="reaction-presets">Reaction Presets</h3>
+<p>Reaction Presets target the listener side of the system.</p>
+<p>They can:</p>
+<ul>
+<li>Add new Reactions</li>
+</ul>
+<hr />
+<h3 id="why-presets-matter">Why Presets Matter</h3>
+<p>Presets allow you to:</p>
+<ul>
+<li>Avoid duplicating Behavior configurations</li>
+<li>Keep base Behaviors clean and reusable</li>
+<li>Scale gameplay rules without hard-coded logic</li>
+</ul>
+<p>Instead of modifying Actors directly, you layer behavior modifications through Presets.</p>
+<p>This preserves modularity while enabling powerful runtime configuration.</p>
 
 
 

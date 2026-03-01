@@ -415,10 +415,20 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Brain Component">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behavior-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Behavior Component
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#behavior-vs-brain" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -427,7 +437,8 @@
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Behavior vs Brain">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#why-this-separation-exists" class="md-nav__link">
@@ -579,6 +590,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../../api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../debugging/" class="md-nav__link">
         
   
@@ -653,6 +691,33 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -688,10 +753,20 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Brain Component">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behavior-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Behavior Component
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#behavior-vs-brain" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -700,7 +775,8 @@
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Behavior vs Brain">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#why-this-separation-exists" class="md-nav__link">
@@ -737,6 +813,7 @@
 
 <h1 id="brain-and-behavior-components">Brain and Behavior components</h1>
 <h2 id="brain-component">Brain Component</h2>
+<p><img alt="Behavior Component" src="../../images/core-concept-brain-behavior-behavior-01.png" /></p>
 <p>The Brain Component is required on any Actor that owns one or more Behavior Components.</p>
 <p>It acts as:</p>
 <ul>
@@ -746,7 +823,12 @@
 </ul>
 <p>An Actor may have multiple Behavior Components attached to different Primitive Components, but it must have <strong>only one Brain Component</strong>.</p>
 <hr />
-<h3 id="behavior-vs-brain">Behavior vs Brain</h3>
+<h2 id="behavior-component">Behavior Component</h2>
+<p><img alt="Brain Component" src="../../images/core-concept-brain-behavior-brain-01.png" /></p>
+<p>The Behavior Component is responsible for handling localized systemic logic on an Actor.</p>
+<p>It is a <code>SceneComponent</code> that must be attached to a <code>PrimitiveComponent</code>, allowing it to emit and receive stimuli through the attached component’s <code>OnHit</code> and <code>OnOverlap</code> events.</p>
+<hr />
+<h2 id="behavior-vs-brain">Behavior vs Brain</h2>
 <p><strong>Behavior Component</strong></p>
 <ul>
 <li>Is a <code>SceneComponent</code></li>

@@ -1,0 +1,1124 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../actions-reactions/">
+      
+      
+        <link rel="next" href="../meta-properties/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+    
+    
+      
+        <title>Effects - Domino Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#reaction-effects" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Domino Documentation" class="md-header__button md-logo" aria-label="Domino Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Domino Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Effects
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Domino Documentation" class="md-nav__button md-logo" aria-label="Domino Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Domino Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation & Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core Concepts
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Core Concepts
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concept/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Concept
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../brain-behavior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Brain and Behavior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actions-reactions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions and Reactions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Effects
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Effects
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-custom-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating Custom Effects
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-an-effect-in-blueprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating an Effect in Blueprint
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-an-effect-in-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating an Effect in C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-effect-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Effect Parameters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#effect-execution-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Effect Execution Flow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#built-in-reaction-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Built-in Reaction Effects
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Built-in Reaction Effects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exposing-configurable-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exposing Configurable Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../meta-properties/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meta Properties
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../debugging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Debugging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../example/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Example
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-custom-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating Custom Effects
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-an-effect-in-blueprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating an Effect in Blueprint
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-an-effect-in-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating an Effect in C++
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-effect-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Effect Parameters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#effect-execution-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Effect Execution Flow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#built-in-reaction-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Built-in Reaction Effects
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Built-in Reaction Effects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exposing-configurable-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exposing Configurable Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="reaction-effects">Reaction Effects</h1>
+<p>A <strong>Reaction Effect</strong> represents a concrete modification to the game world or to an Actor’s state.</p>
+<p>It is the execution layer of the system.</p>
+<div class="admonition info">
+<p class="admonition-title">Example</p>
+<ul>
+<li>Applying damage</li>
+<li>Modifying a Meta-Property</li>
+<li>Triggering an animation or sound</li>
+<li>Applying a force or impulse</li>
+</ul>
+<p>Effects are:</p>
+<ul>
+<li>Stateless</li>
+<li>Reusable</li>
+<li>Executed as a result of a Reaction</li>
+</ul>
+<p>Effects may optionally emit new Stimuli, enabling chained or systemic interactions.</p>
+</div>
+<h2 id="creating-custom-effects">Creating Custom Effects</h2>
+<p>You can create your own Reaction Effects in <strong>Blueprint</strong> or <strong>C++</strong>.</p>
+<p>The base class is: <code>UDominoReactionEffect</code></p>
+<p>It derives from <code>UGameplayTask</code>, allowing time-based execution, ticking, delays, and duration control.</p>
+<hr />
+<h2 id="creating-an-effect-in-blueprint">Creating an Effect in Blueprint</h2>
+<ol>
+<li>Create a new Blueprint class.</li>
+<li>Inherit from <code>DominoReactionEffect</code>.</li>
+<li>Override the desired Blueprint events:</li>
+<li><code>CanApplyEffect</code></li>
+<li><code>StartEffect</code></li>
+<li><code>TickEffect</code></li>
+<li><code>FinishEffect</code></li>
+</ol>
+<p>Blueprint-only effects are fully supported and do not require C++.</p>
+<hr />
+<h2 id="creating-an-effect-in-c">Creating an Effect in C++</h2>
+<p>To create a custom effect in C++:</p>
+<div class="highlight"><pre><span></span><code><span class="n">UCLASS</span><span class="p">()</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">YOURPROJECT_API</span><span class="w"> </span><span class="n">UMyCustomEffect</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">UDominoReactionEffect</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">GENERATED_BODY</span><span class="p">()</span>
+
+<span class="k">protected</span><span class="o">:</span>
+
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">StartEffect_Implementation</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">TickEffect_Implementation</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">DeltaTime</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">FinishEffect_Implementation</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">bWasCancelled</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>You can override:</p>
+<ul>
+<li>CanApplyEffect_Implementation()</li>
+<li>StartEffect_Implementation()</li>
+<li>TickEffect_Implementation()</li>
+<li>FinishEffect_Implementation()</li>
+</ul>
+<h2 id="core-effect-parameters">Core Effect Parameters</h2>
+<p>Each effect automatically receives contextual data:
+Stimulus Context</p>
+<ul>
+<li>Stimulus → The GameplayTag of the triggering stimulus</li>
+<li>Intensity → The accumulated intensity value</li>
+<li>SelfActor → The owning Actor</li>
+<li>Hit → Associated HitResult (if applicable)</li>
+</ul>
+<p>These values are BlueprintReadOnly and can be used inside your logic.
+Timing Control</p>
+<p>Effects support built-in timing parameters:</p>
+<ul>
+<li>StartDelay → Delay before StartEffect is called</li>
+<li>Duration → Duration before automatic finish (0 = infinite)</li>
+<li>bUseTick → Enables ticking via TickEffect</li>
+</ul>
+<p>This allows you to implement:</p>
+<ul>
+<li>Timed buffs</li>
+<li>Progressive damage</li>
+<li>Charging effects</li>
+<li>Temporary states</li>
+</ul>
+<h2 id="effect-execution-flow">Effect Execution Flow</h2>
+<p>When triggered, an Effect follows this lifecycle:</p>
+<pre><code>CanApplyEffect()
+→ Validates whether the effect should execute
+
+StartEffect()
+→ Called after StartDelay
+
+TickEffect() (if bUseTick is true)
+→ Called every frame during Duration
+
+FinishEffect()
+→ Called when duration ends or effect is cancelled
+</code></pre>
+<div class="admonition danger">
+<p class="admonition-title">Important</p>
+<p><code>FinishEffect()</code> must be called manually in your implementation.
+If it is not called, the underlying <code>UGameplayTask</code> will never complete, which means:</p>
+<ul>
+<li>The Reaction that triggered the effect will remain active</li>
+<li>Any subsequent effects or state changes may not execute</li>
+<li>Delays, duration timers, or ticked effects may not stop</li>
+</ul>
+<p>Always ensure that FinishEffect() is invoked at the end of your effect logic, whether the effect finishes naturally or is cancelled.</p>
+</div>
+<h2 id="built-in-reaction-effects">Built-in Reaction Effects</h2>
+<p>The plugin comes with a set of pre-built <strong>Reaction Effects</strong> to cover common gameplay scenarios.<br />
+These effects can be used directly in Blueprints or C++, and serve as examples for creating custom effects.</p>
+<table>
+<thead>
+<tr>
+<th>Effect Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AddMetaProperty</strong></td>
+<td>Adds or modifies a Meta-Property on the owning Actor or on another target Actor. Useful for triggering state changes or quantitative effects shared across systems.</td>
+</tr>
+<tr>
+<td><strong>RemoveMetaProperty</strong></td>
+<td>Removes a Meta-Property from the owning Actor or another target. Used to reset or clear state conditions.</td>
+</tr>
+<tr>
+<td><strong>ApplyDamage</strong></td>
+<td>Applies damage to an Actor. Supports standard Unreal damage types and can integrate with health systems.</td>
+</tr>
+<tr>
+<td><strong>AbortStimuli</strong></td>
+<td>Cancels specific Stimuli or stops their propagation. Useful to interrupt ongoing systemic interactions.</td>
+</tr>
+<tr>
+<td><strong>DestroySelfActor</strong></td>
+<td>Destroys the Actor owning this effect. Can be used for destructible objects, consumables, or self-terminating systems.</td>
+</tr>
+<tr>
+<td><strong>ManageFlags</strong></td>
+<td>Adds or removes local Behavior flags or global Brain flags. Allows controlling Reaction activation or global state changes.</td>
+</tr>
+<tr>
+<td><strong>SpawnCascadeParticle</strong></td>
+<td>Spawns a legacy Cascade particle system at a specific location or attached to a component.</td>
+</tr>
+<tr>
+<td><strong>SpawnNiagaraParticle</strong></td>
+<td>Spawns a Niagara particle system at a specific location or attached to a component. Supports parameter overrides for dynamic effects.</td>
+</tr>
+<tr>
+<td><strong>SpawnAudio</strong></td>
+<td>Plays a sound at a location or attached to a component. Useful for reactive audio feedback to stimuli.</td>
+</tr>
+<tr>
+<td><strong>ApplyImpulseOppositeHitDirection</strong></td>
+<td>Applies a physics impulse to a component or Actor.</td>
+</tr>
+<tr>
+<td><strong>AddComponent</strong></td>
+<td>Dynamically adds a component to an Actor. Useful for temporary sensors, effect markers, or modular Actor behavior.</td>
+</tr>
+<tr>
+<td><strong>SpawnActor</strong></td>
+<td>Spawns a new Actor in the world. Can be used for projectiles, summoned entities, or environmental objects.</td>
+</tr>
+<tr>
+<td><strong>AddActions</strong></td>
+<td>Adds new Actions to a Behavior Component at runtime. Allows dynamic modification of the emitter side of the system.</td>
+</tr>
+<tr>
+<td><strong>PropagateStimulusToSelf</strong></td>
+<td>Immediately propagates a new Stimulus to the owning Actor’s Brain. Useful for chaining internal systemic reactions or transforming an incoming stimulus into another one locally.</td>
+</tr>
+<tr>
+<td><strong>PropagateStimulusInRange</strong></td>
+<td>Propagates a new Stimulus to all valid Actors within a defined radius. Enables area-based systemic interactions such as environmental chain reactions.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="exposing-configurable-parameters">Exposing Configurable Parameters</h3>
+<p>You can expose variables in <strong>C++</strong> or <strong>Blueprint</strong> that you want to make configurable from a Preset or a Behavior Component.</p>
+<p><img alt="Effects Parameters 01" src="../../images/core-concept-effects-01.png" /></p>
+<p>Any exposed variable can then be adjusted directly within the Preset or the Behavior configuration, allowing flexible and reusable effect customization.</p>
+<p>By default, built-in effect parameters use the category:</p>
+<p><strong>"Parameters"</strong></p>
+<p>You can use the same category for consistency or define your own custom categories if needed.</p>
+<p><img alt="Effects Parameters 02" src="../../images/core-concept-effects-02.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

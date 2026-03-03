@@ -1,0 +1,1236 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../architecture/">
+      
+      
+        <link rel="next" href="../debugging/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+    
+    
+      
+        <title>API - Domino Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api-reference" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Domino Documentation" class="md-header__button md-logo" aria-label="Domino Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Domino Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Domino Documentation" class="md-nav__button md-logo" aria-label="Domino Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Domino Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation & Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core Concepts
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Core Concepts
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../core-concept/concept/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Concept
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../core-concept/brain-behavior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Brain and Behavior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../core-concept/actions-reactions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions and Reactions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../core-concept/effects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Effects
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../core-concept/meta-properties/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meta Properties
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../debugging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Debugging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../example/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Example
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="api-reference">API Reference</h1>
+<p>This section documents the public API exposed by the plugin.</p>
+<p>The API is divided into three logical layers:</p>
+<ul>
+<li>Global</li>
+<li>Brain Component</li>
+<li>Behavior Component</li>
+<li>Meta-Property</li>
+</ul>
+<p>Each layer exposes different responsibilities within the systemic framework.</p>
+<hr />
+<h1 id="global">Global</h1>
+<p>The Global API exposes utility functions used to interact with the systemic framework at a high level.</p>
+<p>These functions are typically static helpers and can be accessed from both C++ and Blueprint.</p>
+<p><img alt="Global" src="../images/api-global-01.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Function Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PropagateStimuli</strong></td>
+<td>Propagates multiple Stimulus through the systemic framework on an actor. Each Stimulus is evaluated and dispatched to eligible Behaviors and Reactions.</td>
+</tr>
+<tr>
+<td><strong>PropagateStimuliOnBehavior</strong></td>
+<td>Propagates multiple Stimulus directly on a specific Behavior Component. Only that Behavior will process and evaluate the provided Stimuli.</td>
+</tr>
+<tr>
+<td><strong>PropagateStimulus</strong></td>
+<td>Propagates a single Stimulus to the target Actor.</td>
+</tr>
+<tr>
+<td><strong>PropagateStimulusOnBehavior</strong></td>
+<td>Propagates a single Stimulus directly to a specific Behavior Component.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="brain-component-api">Brain Component API</h1>
+<p>The Brain Component API exposes Actor-level systemic controls.</p>
+<p>The Brain is the central decision layer and registry for all Behavior Components attached to an Actor.</p>
+<p><img alt="Brain" src="../images/api-brain-01.png" /></p>
+<p>The Brain Component is the central coordination layer of the Domino system.
+It manages Behavior registration, stimulus propagation, global flags,
+and systemic activation control at the Actor level.</p>
+<hr />
+<h2 id="blueprint-callable-functions">Blueprint Callable Functions</h2>
+<h3 id="stimulus-propagation">Stimulus Propagation</h3>
+<table>
+<thead>
+<tr>
+<th>Function Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PropagateStimuli</strong></td>
+<td>Propagates multiple stimuli to the specified Actor. Each stimulus is evaluated and dispatched to eligible Behavior Components.</td>
+</tr>
+<tr>
+<td><strong>PropagateStimulus</strong></td>
+<td>Propagates a single stimulus to the specified Actor.</td>
+</tr>
+<tr>
+<td><strong>PropagateStimuliOnBehavior</strong></td>
+<td>Propagates multiple stimuli directly to a specific Behavior Component.</td>
+</tr>
+<tr>
+<td><strong>PropagateStimulusOnBehavior</strong></td>
+<td>Propagates a single stimulus directly to a specific Behavior Component.</td>
+</tr>
+</tbody>
+</table>
+<p>All propagation functions support an optional <strong>Intensity</strong> parameter (default = 1).</p>
+<hr />
+<h3 id="reaction-control">Reaction Control</h3>
+<table>
+<thead>
+<tr>
+<th>Function Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CancelActiveReactStimuli</strong></td>
+<td>Cancels all currently active reaction effects matching any of the provided stimulus tags.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="global-flags-management">Global Flags Management</h3>
+<table>
+<thead>
+<tr>
+<th>Function Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AddGlobalFlags</strong></td>
+<td>Adds one or more global flags to the Brain. Returns true if successfully added.</td>
+</tr>
+<tr>
+<td><strong>RemoveGlobalFlags</strong></td>
+<td>Removes one or more global flags from the Brain. Returns true if successfully removed.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="system-control">System Control</h3>
+<table>
+<thead>
+<tr>
+<th>Function Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SetDominoActive</strong></td>
+<td>Enables or disables the Domino systemic processing for this Actor. When disabled, stimuli will not trigger reactions.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="queries">Queries</h3>
+<table>
+<thead>
+<tr>
+<th>Function Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GetBehaviorComponents</strong></td>
+<td>Returns all Behavior Components currently registered to the Brain.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="internal-c-only-functions">Internal / C++ Only Functions</h2>
+<p>These functions are not exposed to Blueprint and are used internally by the system:</p>
+<table>
+<thead>
+<tr>
+<th>Function Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>OnTickFrequency</strong></td>
+<td>Updates elapsed frequencies and triggers range-based propagations.</td>
+</tr>
+<tr>
+<td><strong>RegisterBehaviorComponent</strong></td>
+<td>Registers a Behavior Component to this Brain.</td>
+</tr>
+<tr>
+<td><strong>UnregisterBehaviorComponent</strong></td>
+<td>Unregisters a Behavior Component from this Brain.</td>
+</tr>
+<tr>
+<td><strong>GetActiveReactStimuliTasks</strong></td>
+<td>Returns all currently active reaction effect tasks.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="behavior-component-api">Behavior Component API</h1>
+<p>The Behavior Component API exposes localized systemic functionality tied to a specific PrimitiveComponent.</p>
+<p>It represents a physical interaction zone capable of emitting Actions and reacting to Stimuli.</p>
+<p><img alt="Behavior" src="../images/api-behavior-01.png" /></p>
+<p>The Behavior Component handles localized systemic logic tied to a specific
+PrimitiveComponent. It manages Actions (stimulus emitters), Reactions,
+intensity accumulation, and contact/range propagation.</p>
+<hr />
+<h2 id="blueprint-callable-functions_1">Blueprint Callable Functions</h2>
+<h3 id="actions-management">Actions Management</h3>
+<table>
+<thead>
+<tr>
+<th>Function Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AddActions</strong></td>
+<td>Adds multiple systemic Actions to the Behavior at runtime.</td>
+</tr>
+<tr>
+<td><strong>AddAction</strong></td>
+<td>Adds a single systemic Action to the Behavior.</td>
+</tr>
+<tr>
+<td><strong>RemoveActionsWithStimuli</strong></td>
+<td>Removes all Actions matching any of the provided stimulus tags.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="contact-propagation">Contact Propagation</h3>
+<table>
+<thead>
+<tr>
+<th>Function Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PropagateContactStimuli</strong></td>
+<td>Triggers contact-based propagation for all configured stimuli using the provided contact result.</td>
+</tr>
+<tr>
+<td><strong>PropagateContactStimulus</strong></td>
+<td>Triggers contact-based propagation for a specific Action and target.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="range-propagation">Range Propagation</h3>
+<table>
+<thead>
+<tr>
+<th>Function Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PropagateRangeStimuli</strong></td>
+<td>Triggers range-based propagation for all configured stimuli.</td>
+</tr>
+<tr>
+<td><strong>PropagateRangeStimulus</strong></td>
+<td>Triggers range-based propagation for a specific Action.</td>
+</tr>
+</tbody>
+</table>
+<p>The optional <strong>bForce</strong> parameter allows bypassing frequency checks.</p>
+<hr />
+<h3 id="reaction-handling">Reaction Handling</h3>
+<table>
+<thead>
+<tr>
+<th>Function Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>StimulusReact</strong></td>
+<td>Requests immediate evaluation of a specific stimulus and triggers eligible Reactions.</td>
+</tr>
+<tr>
+<td><strong>AccumulateStimulusIntensity</strong></td>
+<td>Accumulates intensity for a stimulus and returns the new accumulated value.</td>
+</tr>
+<tr>
+<td><strong>ResetStimulusIntensity</strong></td>
+<td>Resets the accumulated intensity of a stimulus.</td>
+</tr>
+<tr>
+<td><strong>IsStimulusActive</strong></td>
+<td>Returns whether a specific stimulus is currently active.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="internal-system-functions">Internal / System Functions</h2>
+<p>These functions are not intended for direct Blueprint usage.</p>
+<table>
+<thead>
+<tr>
+<th>Function Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DeactivateStimulus</strong></td>
+<td>Deactivates a specific stimulus internally.</td>
+</tr>
+<tr>
+<td><strong>OnTickFrequency</strong></td>
+<td>Updates elapsed frequencies and triggers range propagations.</td>
+</tr>
+<tr>
+<td><strong>OnPrimitiveBeginOverlap</strong></td>
+<td>Handles overlap events from the owned PrimitiveComponent.</td>
+</tr>
+<tr>
+<td><strong>OnPrimitiveHit</strong></td>
+<td>Handles hit events from the owned PrimitiveComponent.</td>
+</tr>
+<tr>
+<td><strong>IncreaseActiveTasksCounter</strong></td>
+<td>Increments the active task counter for a stimulus.</td>
+</tr>
+<tr>
+<td><strong>DecreaseActiveTaskCounter</strong></td>
+<td>Decrements the active task counter for a stimulus.</td>
+</tr>
+<tr>
+<td><strong>HasActiveTasks</strong></td>
+<td>Returns whether there are active reaction tasks for a stimulus.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="protected-internal-functions">Protected Internal Functions</h2>
+<table>
+<thead>
+<tr>
+<th>Function Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>LoadFromPresets</strong></td>
+<td>Loads Actions and Reactions data from assigned Presets.</td>
+</tr>
+<tr>
+<td><strong>RegisterPrimitiveComponent</strong></td>
+<td>Registers the owner's PrimitiveComponent to receive hit events.</td>
+</tr>
+<tr>
+<td><strong>UnRegisterPrimitiveComponent</strong></td>
+<td>Unregisters the PrimitiveComponent from hit events.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="meta-property-api">Meta-Property API</h1>
+<p>The Meta-Property system provides a flexible way to store and retrieve
+typed data dynamically at runtime.</p>
+<p>Meta-Properties are identified by a <code>FName</code> and can store multiple data types.
+They are accessible from both C++ and Blueprint.</p>
+<p>Meta-Properties are independent from Brain or Behavior Components and
+can be used as a shared systemic data layer.</p>
+<hr />
+<h2 id="add-meta-properties">Add Meta-Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Function Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AddBoolMetaProperty</strong></td>
+<td>Adds or overrides a boolean meta-property.</td>
+</tr>
+<tr>
+<td><strong>AddBoolArrayMetaProperty</strong></td>
+<td>Adds or overrides a boolean array meta-property.</td>
+</tr>
+<tr>
+<td><strong>AddIntMetaProperty</strong></td>
+<td>Adds or overrides an integer meta-property.</td>
+</tr>
+<tr>
+<td><strong>AddIntArrayMetaProperty</strong></td>
+<td>Adds or overrides an integer array meta-property.</td>
+</tr>
+<tr>
+<td><strong>AddFloatMetaProperty</strong></td>
+<td>Adds or overrides a float meta-property.</td>
+</tr>
+<tr>
+<td><strong>AddFloatArrayMetaProperty</strong></td>
+<td>Adds or overrides a float array meta-property.</td>
+</tr>
+<tr>
+<td><strong>AddStringMetaProperty</strong></td>
+<td>Adds or overrides a string meta-property.</td>
+</tr>
+<tr>
+<td><strong>AddStringArrayMetaProperty</strong></td>
+<td>Adds or overrides a string array meta-property.</td>
+</tr>
+<tr>
+<td><strong>AddGameplayTagMetaProperty</strong></td>
+<td>Adds or overrides a gameplay tag meta-property.</td>
+</tr>
+<tr>
+<td><strong>AddGameplayTagContainerMetaProperty</strong></td>
+<td>Adds or overrides a gameplay tag container meta-property.</td>
+</tr>
+</tbody>
+</table>
+<p>All add functions return <strong>true</strong> if the property was successfully added or updated.</p>
+<hr />
+<h2 id="get-meta-properties">Get Meta-Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Function Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GetBoolMetaProperty</strong></td>
+<td>Returns the value of a boolean meta-property.</td>
+</tr>
+<tr>
+<td><strong>GetBoolArrayMetaProperty</strong></td>
+<td>Returns the value of a boolean array meta-property.</td>
+</tr>
+<tr>
+<td><strong>GetIntMetaProperty</strong></td>
+<td>Returns the value of an integer meta-property.</td>
+</tr>
+<tr>
+<td><strong>GetIntArrayMetaProperty</strong></td>
+<td>Returns the value of an integer array meta-property.</td>
+</tr>
+<tr>
+<td><strong>GetFloatMetaProperty</strong></td>
+<td>Returns the value of a float meta-property.</td>
+</tr>
+<tr>
+<td><strong>GetFloatArrayMetaProperty</strong></td>
+<td>Returns the value of a float array meta-property.</td>
+</tr>
+<tr>
+<td><strong>GetStringMetaProperty</strong></td>
+<td>Returns the value of a string meta-property.</td>
+</tr>
+<tr>
+<td><strong>GetStringArrayMetaProperty</strong></td>
+<td>Returns the value of a string array meta-property.</td>
+</tr>
+<tr>
+<td><strong>GetGameplayTagMetaProperty</strong></td>
+<td>Returns the value of a gameplay tag meta-property.</td>
+</tr>
+<tr>
+<td><strong>GetGameplayTagContainerMetaProperty</strong></td>
+<td>Returns the value of a gameplay tag container meta-property.</td>
+</tr>
+</tbody>
+</table>
+<p>If the property does not exist, the default value of the type is returned.</p>
+<hr />
+<h2 id="remove-meta-property">Remove Meta-Property</h2>
+<table>
+<thead>
+<tr>
+<th>Function Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RemoveMetaProperty</strong></td>
+<td>Removes a meta-property by name. Returns true if successfully removed.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="c-extended-api">C++ Extended API</h2>
+<p>The following functions are available in C++ for advanced use:</p>
+<ul>
+<li><code>AddMetaProperty(const FDominoSystemicMetaProperty&amp;)</code></li>
+<li><code>GetMetaProperty(FName MetaPropertyName) const</code></li>
+</ul>
+<p>These allow low-level or custom meta-property management.</p>
+<h1 id="architecture-summary">Architecture Summary</h1>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Scope</th>
+<th>Responsibility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Global</td>
+<td>System-wide</td>
+<td>Utilities and manual control</td>
+</tr>
+<tr>
+<td>Brain Component</td>
+<td>Actor-wide</td>
+<td>Central registry and decision layer</td>
+</tr>
+<tr>
+<td>Behavior Component</td>
+<td>Local (PrimitiveComponent)</td>
+<td>Action/Reaction logic</td>
+</tr>
+<tr>
+<td>Meta-Property</td>
+<td>Actor-wide</td>
+<td>Meta-Property logic</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1281 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../brain-behavior/">
+      
+      
+        <link rel="next" href="../effects/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+    
+    
+      
+        <title>Actions and Reactions - Domino Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#actions-reactions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Domino Documentation" class="md-header__button md-logo" aria-label="Domino Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Domino Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Actions and Reactions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Domino Documentation" class="md-nav__button md-logo" aria-label="Domino Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Domino Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation & Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core Concepts
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Core Concepts
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concept/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Concept
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../brain-behavior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Brain and Behavior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions and Reactions
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions and Reactions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#action" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Action
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Action">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#propagation-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Propagation Modes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intensity-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intensity &amp; Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activation-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Activation Conditions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reaction
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reaction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stimulus-filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stimulus Filtering
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intensity-accumulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intensity Accumulation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-modification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State Modification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#effect-triggering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Effect Triggering
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Presets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Presets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#global-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Global Presets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#action-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Action Presets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reaction-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reaction Presets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-presets-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Presets Matter
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../effects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Effects
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../meta-properties/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meta Properties
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../debugging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Debugging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../example/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Example
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#action" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Action
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Action">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#propagation-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Propagation Modes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intensity-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intensity &amp; Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activation-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Activation Conditions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reaction
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reaction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stimulus-filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stimulus Filtering
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intensity-accumulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intensity Accumulation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-modification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State Modification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#effect-triggering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Effect Triggering
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Presets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Presets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#global-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Global Presets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#action-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Action Presets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reaction-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reaction Presets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-presets-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Presets Matter
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="actions-reactions">Actions / Reactions</h1>
+<h2 id="action">Action</h2>
+<p><img alt="Actions" src="../../images/core-concept-actions-reactions-actions-01.png" /></p>
+<p>An <strong>Action</strong> defines the emission of a Stimulus and how it propagates through the world.</p>
+<p>It represents the <strong>emitter side</strong> of the system.</p>
+<p>An Action is responsible for:</p>
+<ul>
+<li>Defining <strong>which Stimulus</strong> is emitted</li>
+<li>Defining <strong>how the Stimulus propagates</strong></li>
+<li>Providing contextual data (source, instigator, location)</li>
+<li>Defining propagation parameters (range, shape, contact rules, intensity)</li>
+<li>Validating activation conditions before emission</li>
+</ul>
+<hr />
+<h3 id="propagation-modes">Propagation Modes</h3>
+<p>An Action does not simply emit a signal globally.<br />
+It defines how the Stimulus is transmitted.</p>
+<p>Propagation can occur through:</p>
+<p><strong>Direct contact</strong></p>
+<ul>
+<li>Physical hit</li>
+<li>Overlap events</li>
+</ul>
+<p><strong>Area-based range</strong></p>
+<ul>
+<li>Radius-based propagation</li>
+<li>Shape-based volumes</li>
+</ul>
+<p>This allows Actions to represent physical, spatial, or abstract emissions.</p>
+<hr />
+<h3 id="intensity-parameters">Intensity &amp; Parameters</h3>
+<p>An Action can define:</p>
+<ul>
+<li>Stimulus intensity</li>
+<li>Radius or range</li>
+<li>Shape configuration</li>
+</ul>
+<p>Intensity can later influence the activation of a Reaction.</p>
+<hr />
+<h3 id="activation-conditions">Activation Conditions</h3>
+<p>Actions may include activation constraints.</p>
+<p>For example, emission can be blocked if:</p>
+<ul>
+<li>The owning Actor has specific flags active or inactive</li>
+<li>The Brain contains restrictive global flags</li>
+</ul>
+<p>This ensures that emission logic remains controlled and context-aware.</p>
+<div class="admonition danger">
+<p class="admonition-title">Important</p>
+<p>Actions:</p>
+<ul>
+<li>Do not listen to Stimuli</li>
+<li>Do not apply Effects directly</li>
+<li>Only define emission and propagation rules</li>
+</ul>
+<p>They are responsible for broadcasting structured information into the system, nothing more.</p>
+</div>
+<hr />
+<h2 id="reaction">Reaction</h2>
+<p><img alt="Reactions" src="../../images/core-concept-actions-reactions-reactions-01.png" /></p>
+<p>A <strong>Reaction</strong> defines how an Actor listens to, filters, and interprets incoming Stimuli.</p>
+<p>It represents the <strong>listener side</strong> of the system.</p>
+<p>A Reaction does not directly execute gameplay logic by itself — it evaluates conditions and, if valid, triggers one or more Effects.</p>
+<hr />
+<h3 id="stimulus-filtering">Stimulus Filtering</h3>
+<p>Reactions are responsible for:</p>
+<ul>
+<li>Filtering by <strong>Stimulus type</strong></li>
+<li>Validating contextual data (source, instigator, location)</li>
+<li>Checking local component flags</li>
+<li>Checking global Brain flags</li>
+</ul>
+<p>A Reaction can be blocked if specific required flags are missing, or if forbidden flags are present.</p>
+<p>This ensures precise and context-aware activation.</p>
+<hr />
+<h3 id="intensity-accumulation">Intensity Accumulation</h3>
+<p>Stimuli can carry an <strong>intensity value</strong>.</p>
+<p>Each time a valid propagation is received, the Reaction:</p>
+<ul>
+<li>Accumulates the received intensity</li>
+<li>Compares the accumulated value against its activation range</li>
+</ul>
+<p>Activation ranges can be configured as:</p>
+<ul>
+<li><strong>Minimum / Maximum</strong></li>
+<li>Inclusive or exclusive bounds</li>
+<li><strong>Open range</strong> (no min or max requirement)</li>
+</ul>
+<p>The Reaction activates only when the accumulated intensity falls within the defined range.</p>
+<p>This allows behaviors such as:</p>
+<ul>
+<li>Gradual alertness increase</li>
+<li>Threshold-based activation</li>
+<li>Progressive environmental responses</li>
+</ul>
+<hr />
+<h3 id="state-modification">State Modification</h3>
+<p>When activated, a Reaction can:</p>
+<ul>
+<li>Add or remove <strong>local states</strong> on its Behavior Component</li>
+<li>Add or remove <strong>global states</strong> on the Brain Component</li>
+</ul>
+<p>This allows a Reaction to:</p>
+<ul>
+<li>Modify Actor-level logic</li>
+<li>Influence other Behavior Components indirectly</li>
+<li>Trigger cascading systemic responses</li>
+</ul>
+<p>State changes may themselves be interpreted by other Reactions.</p>
+<hr />
+<h3 id="effect-triggering">Effect Triggering</h3>
+<p>Once all conditions are satisfied, the Reaction triggers one or more Effects.</p>
+<p>A single Reaction can trigger multiple Effects.</p>
+<div class="admonition danger">
+<p class="admonition-title">Important</p>
+<p>Reactions:</p>
+<ul>
+<li>Do not emit Stimuli directly (unless via Effects)</li>
+<li>Do not contain hard-coded actor references</li>
+<li>Operate strictly through filtering, accumulation, and condition evaluation</li>
+</ul>
+<p>They interpret information, they do not own the logic of execution.</p>
+</div>
+<hr />
+<h2 id="presets">Presets</h2>
+<p>Presets allow you to configure, extend, or override Actions and Reactions without modifying the original Behavior setup.</p>
+<p>They are designed to promote reuse, modularity, and scalability across multiple Actors.</p>
+<p>There are three types of Presets.</p>
+<p><img alt="Actions Reactions Presets Diagram" src="../../images/core-concept-actions-reactions-presets-01.png" /></p>
+<p>You can create Presets directly from the Content Browser by right-clicking, navigating to the Domino category, and selecting the desired Preset type.</p>
+<p><img alt="Actions Reactions Presets Content Browser" src="../../images/core-concept-actions-reactions-presets-02.png" /></p>
+<hr />
+<h3 id="global-presets">Global Presets</h3>
+<p>Global Presets apply to both <strong>Actions and Reactions</strong>.</p>
+<p>They allow you to:</p>
+<ul>
+<li>Add shared configuration</li>
+<li>Enforce common rules</li>
+<li>Modify default parameters</li>
+<li>Apply systemic constraints across multiple Behaviors</li>
+</ul>
+<p>They act as a high-level configuration layer.</p>
+<hr />
+<h3 id="action-presets">Action Presets</h3>
+<p>Action Presets specifically target the emitter side of the system.</p>
+<p>They can:</p>
+<ul>
+<li>Add new Actions to a Behavior</li>
+<li>Override existing Actions</li>
+</ul>
+<hr />
+<h3 id="reaction-presets">Reaction Presets</h3>
+<p>Reaction Presets target the listener side of the system.</p>
+<p>They can:</p>
+<ul>
+<li>Add new Reactions</li>
+</ul>
+<hr />
+<h3 id="why-presets-matter">Why Presets Matter</h3>
+<p>Presets allow you to:</p>
+<ul>
+<li>Avoid duplicating Behavior configurations</li>
+<li>Keep base Behaviors clean and reusable</li>
+<li>Scale gameplay rules without hard-coded logic</li>
+</ul>
+<p>Instead of modifying Actors directly, you layer behavior modifications through Presets.</p>
+<p>This preserves modularity while enabling powerful runtime configuration.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

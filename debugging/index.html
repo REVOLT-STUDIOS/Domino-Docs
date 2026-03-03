@@ -1,0 +1,1192 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../api/">
+      
+      
+        <link rel="next" href="../faq/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+    
+    
+      
+        <title>Debugging - Domino Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#debugging" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Domino Documentation" class="md-header__button md-logo" aria-label="Domino Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Domino Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Debugging
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Domino Documentation" class="md-nav__button md-logo" aria-label="Domino Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Domino Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation & Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core Concepts
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Core Concepts
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../core-concept/concept/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Concept
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../core-concept/brain-behavior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Brain and Behavior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../core-concept/actions-reactions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions and Reactions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../core-concept/effects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Effects
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../core-concept/meta-properties/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meta Properties
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Debugging
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Debugging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-mindset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Debugging Mindset
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step-debug-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step-by-Step Debug Checklist
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step-by-Step Debug Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-is-the-action-emitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Is the Action Emitting?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-is-the-stimulus-propagating" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Is the Stimulus Propagating?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-is-the-reaction-receiving-the-stimulus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Is the Reaction Receiving the Stimulus?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-is-intensity-within-range" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Is Intensity Within Range?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-are-effects-executing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Are Effects Executing?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debug-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Debug Tools
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Debug Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gameplay-debugger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gameplay Debugger
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visual-logger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visual Logger
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logging
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Issues
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-debug-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended Debug Strategy
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../example/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Example
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-mindset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Debugging Mindset
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step-debug-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step-by-Step Debug Checklist
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step-by-Step Debug Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-is-the-action-emitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Is the Action Emitting?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-is-the-stimulus-propagating" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Is the Stimulus Propagating?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-is-the-reaction-receiving-the-stimulus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Is the Reaction Receiving the Stimulus?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-is-intensity-within-range" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Is Intensity Within Range?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-are-effects-executing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Are Effects Executing?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debug-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Debug Tools
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Debug Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gameplay-debugger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gameplay Debugger
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visual-logger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visual Logger
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logging
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Issues
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-debug-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended Debug Strategy
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="debugging">Debugging</h1>
+<p>Because the framework is systemic and decoupled, debugging requires understanding how Stimuli propagate and how Reactions evaluate conditions.</p>
+<p>This section explains how to diagnose issues efficiently.</p>
+<hr />
+<h2 id="debugging-mindset">Debugging Mindset</h2>
+<p>When something does not behave as expected, always think in terms of:</p>
+<p>Action → Stimulus → Propagation → Reaction → Conditions → Effect</p>
+<p>A failure can occur at any step in this chain.</p>
+<hr />
+<h2 id="step-by-step-debug-checklist">Step-by-Step Debug Checklist</h2>
+<h3 id="1-is-the-action-emitting">1. Is the Action Emitting?</h3>
+<p>Verify:</p>
+<ul>
+<li>The Action is not blocked by local flags</li>
+<li>The Brain does not contain blocking global flags</li>
+</ul>
+<p>If the Action is blocked, no Stimulus will propagate.</p>
+<hr />
+<h3 id="2-is-the-stimulus-propagating">2. Is the Stimulus Propagating?</h3>
+<p>If using contact-based propagation:</p>
+<p>The attached <code>PrimitiveComponent</code> must:</p>
+<ul>
+<li>Have collision enabled</li>
+<li>Have correct collision channel configuration</li>
+<li>Have <strong>Generate Overlap Events</strong> enabled (for overlaps)</li>
+<li>Have <strong>Simulation Generates Hit Events</strong> enabled (for hits)</li>
+<li>Block or overlap the relevant channels</li>
+</ul>
+<p>If using trace-based propagation:</p>
+<ul>
+<li>Ensure collision is query-enabled</li>
+<li>Verify trace channel configuration</li>
+<li>Confirm range and shape parameters</li>
+</ul>
+<p>Improper collision settings are one of the most common causes of propagation failure.</p>
+<hr />
+<h3 id="3-is-the-reaction-receiving-the-stimulus">3. Is the Reaction Receiving the Stimulus?</h3>
+<p>Verify:</p>
+<ul>
+<li>Stimulus type matches the Reaction configuration</li>
+<li>The Behavior Component is correctly registered in the Brain</li>
+<li>The Reaction is not blocked by flags</li>
+<li>Required flags are present</li>
+<li>Forbidden flags are absent</li>
+</ul>
+<hr />
+<h3 id="4-is-intensity-within-range">4. Is Intensity Within Range?</h3>
+<p>Reactions accumulate intensity on each valid propagation.</p>
+<p>Check:</p>
+<ul>
+<li>Minimum / Maximum values</li>
+<li>Inclusive vs exclusive bounds</li>
+<li>Whether the range is open</li>
+<li>Whether enough intensity has been accumulated</li>
+</ul>
+<p>If intensity does not fall within the configured activation range, the Reaction will not trigger.</p>
+<hr />
+<h3 id="5-are-effects-executing">5. Are Effects Executing?</h3>
+<p>If the Reaction triggers but no visible result occurs:</p>
+<ul>
+<li>Confirm Effects are correctly configured</li>
+<li>Verify they are not conditionally blocked</li>
+<li>Check if they depend on external components or states</li>
+</ul>
+<hr />
+<h2 id="debug-tools">Debug Tools</h2>
+<h3 id="gameplay-debugger">Gameplay Debugger</h3>
+<p>Use Unreal’s Gameplay Debugger to:</p>
+<ul>
+<li>Inspect active Brain flags</li>
+<li>Inspect Behavior local flags</li>
+<li>Monitor Meta-Property values</li>
+<li>Observe stimulus reception</li>
+</ul>
+<hr />
+<h3 id="visual-logger">Visual Logger</h3>
+<p>Use Visual Logger to:</p>
+<ul>
+<li>Track propagation events</li>
+<li>Inspect hit/overlap events</li>
+<li>Analyze trace behavior</li>
+<li>Review activation sequences</li>
+</ul>
+<hr />
+<h3 id="logging">Logging</h3>
+<p>Enable plugin-specific logs (if available) to track:</p>
+<ul>
+<li>Stimulus emission</li>
+<li>Propagation validation</li>
+<li>Reaction filtering</li>
+<li>Intensity accumulation</li>
+<li>Effect execution</li>
+</ul>
+<hr />
+<h2 id="common-issues">Common Issues</h2>
+<ul>
+<li>Collision misconfiguration</li>
+<li>Wrong stimulus type</li>
+<li>Intensity thresholds too strict</li>
+<li>Flags unintentionally blocking logic</li>
+<li>Meta-Property values not updated as expected</li>
+</ul>
+<hr />
+<h2 id="recommended-debug-strategy">Recommended Debug Strategy</h2>
+<p>When debugging:</p>
+<ol>
+<li>Start from the Action.</li>
+<li>Verify propagation.</li>
+<li>Check Reaction filtering.</li>
+<li>Inspect intensity accumulation.</li>
+<li>Confirm Effects execution.</li>
+</ol>
+<p>Always isolate one variable at a time.</p>
+<p>Because the system is decoupled, most issues come from configuration mismatches rather than code errors.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -143,3 +143,21 @@ These effects can be used directly in Blueprints or C++, and serve as examples f
 | **AddActions**                       | Adds new Actions to a Behavior Component at runtime. Allows dynamic modification of the emitter side of the system.                                                               |
 | **PropagateStimulusToSelf**          | Immediately propagates a new Stimulus to the owning Actor’s Brain. Useful for chaining internal systemic reactions or transforming an incoming stimulus into another one locally. |
 | **PropagateStimulusInRange**         | Propagates a new Stimulus to all valid Actors within a defined radius. Enables area-based systemic interactions such as environmental chain reactions.                            |
+
+---
+
+### Exposing Configurable Parameters
+
+You can expose variables in **C++** or **Blueprint** that you want to make configurable from a Preset or a Behavior Component.
+
+![Effects Parameters 01](../images/core-concept-effects-01.png)
+
+Any exposed variable can then be adjusted directly within the Preset or the Behavior configuration, allowing flexible and reusable effect customization.
+
+By default, built-in effect parameters use the category:
+
+**"Parameters"**
+
+You can use the same category for consistency or define your own custom categories if needed.
+
+![Effects Parameters 02](../images/core-concept-effects-02.png)

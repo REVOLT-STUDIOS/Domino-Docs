@@ -171,6 +171,10 @@ There are three types of Presets.
 
 ![Actions Reactions Presets Diagram](../images/core-concept-actions-reactions-presets-01.png)
 
+You can create Presets directly from the Content Browser by right-clicking, navigating to the Domino category, and selecting the desired Preset type.
+
+![Actions Reactions Presets Content Browser](../images/core-concept-actions-reactions-presets-02.png)
+
 ---
 
 ### Global Presets
